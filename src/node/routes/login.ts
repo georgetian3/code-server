@@ -87,7 +87,7 @@ router.post<{}, string, { password: string; base?: string }, { to?: string }>("/
       res.cookie(CookieKeys.Session, hashedPassword, getCookieOptions(req))
 
       //const to = (typeof req.query.to === "string" && req.query.to) || "/"
-      return res.redirect('http://webide.georgetian.com:18082/')//redirect(req, res, to, { to: undefined })
+      return res.redirect('http://webide.georgetian.com:18082/projects')//redirect(req, res, to, { to: undefined })
     }
 
     // Note: successful logins should not count against the RateLimiter
